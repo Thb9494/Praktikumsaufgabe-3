@@ -1,30 +1,20 @@
 import java.util.ArrayList;
 import java.util.List;
 
-public class Sortierer {
+public abstract class Sortierer {
  //integer liste erstellen
- private List<Integer> liste;
- ArrayList<Integer> liste2 = new ArrayList<Integer>(liste);  //kopierte Liste liste 
+ protected ArrayList<Integer> liste;
+
  public long anfangszeit;
  public long endzeit;
+
+ 
   //konstruktor, objektreferenz liste soll auf Kopie der übergebenen Liste zeigen
   public Sortierer(List<Integer> liste) {
-    this.liste = liste2;
+    this.liste = new ArrayList<Integer>(liste);  //kopierte Liste liste  
   }
 
-  protected List<Integer> sortieren(List<Integer> liste) {
-    //sortiere liste
-    // for (int i = 0; i < liste.size(); i++) {
-    //   for (int j = i + 1; j < liste.size(); j++) {
-    //     if (liste.get(i) > liste.get(j)) {
-    //       int temp = liste.get(i);
-    //       liste.set(i, liste.get(j));
-    //       liste.set(j, temp);
-    //     }
-    //   }
-    // }
-    return liste;
-  }
+  protected abstract List<Integer> sortieren(List<Integer> liste);
 
   public List<Integer> sortieren() {
     anfangszeit = System.currentTimeMillis();

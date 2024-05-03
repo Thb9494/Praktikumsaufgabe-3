@@ -7,6 +7,7 @@ public static void main(String[] args) {
   for (int i = 0; i < 500; i++) {
     liste.add((int)(Math.random()*114)+1900);
   }
+  Ausgabe.liste(liste);
 
   
 

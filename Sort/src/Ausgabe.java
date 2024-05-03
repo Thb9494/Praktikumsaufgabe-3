@@ -11,4 +11,17 @@ public class Ausgabe {
   }
   System.out.println();
 }
+
+public static void mergeSort() {
+  System.out.println("Soertiert mit MergeSort");
+  
+}
+
+public static void quickSort() {
+  System.out.println("Sortiert mit QuickSort"); 
+}
+
+public static void insertSort() {
+  System.out.println("Sortiert mit InsertSort");
+}
 }
