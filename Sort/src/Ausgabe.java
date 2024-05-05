@@ -10,11 +10,12 @@ public class Ausgabe {
     System.out.print(liste.get(i) + " ");
   }
   System.out.println();
+  System.out.println();
 }
 
 public static void mergeSort() {
   System.out.println("Soertiert mit MergeSort");
-  
+
 }
 
 public static void quickSort() {
@@ -23,5 +24,10 @@ public static void quickSort() {
 
 public static void insertSort() {
   System.out.println("Sortiert mit InsertSort");
+}
+
+//Methode, die die benötigte Rechenzeit (Sortierer.getOperations()) ausgibt
+public static void zeit(Sortierer sortierer) {
+  System.out.println("benotigte Rechenzeit: " + sortierer.getOperations() + "ms");
 }
 }
