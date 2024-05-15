@@ -25,7 +25,7 @@ public abstract class Sortierer {
   }
 
   public long getOperations() {
-    return anfangszeit - endzeit;
+    return endzeit - anfangszeit;
   }
 
 

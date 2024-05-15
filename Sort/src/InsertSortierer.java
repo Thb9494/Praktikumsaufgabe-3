@@ -7,7 +7,6 @@ public class InsertSortierer extends Sortierer {
   }
 
   protected List<Integer> sortieren(List<Integer> liste) {
-    this.liste = new ArrayList<Integer>(liste);
     for (int i = 1; i < liste.size(); i++) {
       int key = liste.get(i);
       int j = i - 1;

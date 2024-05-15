@@ -7,7 +7,7 @@ public class MergeSortierer extends Sortierer{
   }
   //implementierung der Methode sortieren
   protected List<Integer> sortieren(List<Integer> liste) {
-    this.liste = new ArrayList<Integer>(liste);
+    // this.liste = new ArrayList<Integer>(liste);
     //wenn liste nur ein Element hat
     if (liste.size() <= 1) {
       return liste;

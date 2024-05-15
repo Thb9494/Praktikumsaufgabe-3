@@ -9,28 +9,28 @@ public class QuickSortierer extends Sortierer{
   }
 
   protected List<Integer> sortieren(List<Integer> liste) {
-  ArrayList<Integer> ersteListe = new ArrayList<Integer>();
-  ArrayList<Integer> zweiteListe = new ArrayList<Integer>();
-  ArrayList<Integer> sortierteListe = new ArrayList<Integer>();
+  List<Integer> ersteListe = new ArrayList<Integer>();
+  List<Integer> zweiteListe = new ArrayList<Integer>();
+  List<Integer> sortierteListe = new ArrayList<Integer>();
   if (liste.size() <= 1) {  //wenn liste nur ein Element hat  
     return liste; 
   } else {
     int pivot = liste.get(0); //erstes Element als Pivot
-    for (int i = 1; i < liste.size(); i++) {
+    liste.remove(0); //Pivot entfernen
+    for (int i = 0; i < liste.size(); i++) {
       if (liste.get(i) < pivot) {
         ersteListe.add(liste.get(i)); //Elemente kleiner als Pivot in ersteListe
       } else {
         zweiteListe.add(liste.get(i)); //Elemente größer als Pivot in zweiteListe
       }
     }
-    ersteListe = (ArrayList<Integer>) sortieren(ersteListe); //rekursiv sortieren
-    zweiteListe = (ArrayList<Integer>) sortieren(zweiteListe); //rekursiv sortieren
-    ersteListe.add(pivot); //Pivot hinzufügen
+    ersteListe = sortieren(ersteListe); //rekursiv sortieren
+    zweiteListe = sortieren(zweiteListe); //rekursiv sortieren
+
     sortierteListe.addAll(ersteListe); //ersteListe hinzufügen
+    sortierteListe.add(pivot); //Pivot hinzufügen
     sortierteListe.addAll(zweiteListe); //zweiteListe hinzufügen
     return sortierteListe;
-
-  
 }
 }
 }
