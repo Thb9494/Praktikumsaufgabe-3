@@ -12,6 +12,7 @@ public class QuickSortierer extends Sortierer{
   List<Integer> ersteListe = new ArrayList<Integer>();
   List<Integer> zweiteListe = new ArrayList<Integer>();
   List<Integer> sortierteListe = new ArrayList<Integer>();
+
   if (liste.size() <= 1) {  //wenn liste nur ein Element hat  
     return liste; 
   } else {

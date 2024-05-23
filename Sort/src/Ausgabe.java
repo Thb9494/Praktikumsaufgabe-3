@@ -29,5 +29,6 @@ public static void insertSort() {
 //Methode, die die benötigte Rechenzeit (Sortierer.getOperations()) ausgibt
 public static void zeit(Sortierer sortierer) {
   System.out.println("benotigte Rechenzeit: " + sortierer.getOperations() + "ms");
+  System.out.println();
 }
 }

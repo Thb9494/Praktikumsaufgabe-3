@@ -21,7 +21,6 @@ public abstract class Sortierer {
     sortieren(liste);
     endzeit = System.currentTimeMillis();
     return liste;
-    //return sortieren(liste);
   }
 
   public long getOperations() {

@@ -10,26 +10,33 @@ public static void main(String[] args) {
   }
 
   Ausgabe.liste(liste);
-  // Ausgabe.insertSort();
+
   // //new Insertsortierer objekt
-  // InsertSortierer insertSortierer = new InsertSortierer(liste);
-  // List<Integer> test = insertSortierer.sortieren();
-  // Ausgabe.liste(test);
-  // Ausgabe.zeit(insertSortierer);
+  Ausgabe.insertSort();
+  InsertSortierer insertSortierer = new InsertSortierer(liste);
+  List<Integer> insertSortet = insertSortierer.sortieren(liste);
+  insertSortierer.sortieren();
+  Ausgabe.liste(insertSortet);
+  Ausgabe.zeit(insertSortierer);
 
   // //new Quicksortierer objekt
-  // Ausgabe.quickSort();
-  // QuickSortierer quickSortierer = new QuickSortierer(liste);
-  // List<Integer> test = quickSortierer.sortieren();
-  // Ausgabe.liste(test);
-  // Ausgabe.zeit(quickSortierer);
+  Ausgabe.quickSort();
+  QuickSortierer quickSortierer = new QuickSortierer(liste);
+  List<Integer> quickSortet = quickSortierer.sortieren(liste);
+  quickSortierer.sortieren();
+  Ausgabe.liste(quickSortet);
+  Ausgabe.zeit(quickSortierer);
 
   // new Mergesortierer objekt
   Ausgabe.mergeSort();
   MergeSortierer mergeSortierer = new MergeSortierer(liste);
-  List<Integer> test = mergeSortierer.sortieren(liste);
-  Ausgabe.liste(test);
+  List<Integer> mergeSortet = mergeSortierer.sortieren(liste);
+  mergeSortierer.sortieren();
+  Ausgabe.liste(mergeSortet);
   Ausgabe.zeit(mergeSortierer);
+
+
+
   
 
 }
